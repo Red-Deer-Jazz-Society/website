@@ -37,11 +37,11 @@ const Layout = ({ pageTitle, children }) => {
         <div className={nav_container}>
           <div className={nav_content}>
             <ul className={nav_list}>
-	      {createNavLink("/", "Home")}
-	      {createNavLink("/about", "About")}
-	      {createNavLink("/contact", "Contact")}
-	      {createNavLink("/events", "Events")}
-	      {createNavLink("/sponsors", "Sponsors")}
+	      {createNavLink("/website", "Home")}
+	      {createNavLink("/website/about", "About")}
+	      {createNavLink("/website/contact", "Contact")}
+	      {createNavLink("/website/events", "Events")}
+	      {createNavLink("/website/sponsors", "Sponsors")}
             </ul>
           </div>
         </div>

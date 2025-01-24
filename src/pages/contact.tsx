@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout";
-import ReCAPTCHA from "react-google-recaptcha";
+import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import {
   contact_page,
   contact_intro,
@@ -125,10 +125,10 @@ const ContactPage: React.FC = () => {
           </div>
 
           <div className={recaptcha_container}>
-            <ReCAPTCHA
-              sitekey="6LcZRsAqAAAAAF3-V4PvZMz0Okae0OuVQ1Yv6xce"
-              onChange={handleVerify}
-            />
+            <GoogleReCaptchaProvider
+              reCaptchaKey="6LcZRsAqAAAAAF3-V4PvZMz0Okae0OuVQ1Yv6xce">
+	      <GoogleReCaptcha onVerify={handleVerify} />
+            </GoogleReCaptchaProvider>
           </div>
 
           {submitStatus && (
